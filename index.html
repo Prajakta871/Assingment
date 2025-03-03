@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="home" class="intro">
+        <img src="mommy.jpg" alt="mommy.jpg">
+        <h1>Hi, I'm Prajakta Jadhav</h1>
+        <p>Web Developer & Designer</p>
+        <p>Creating beautiful and functional websites</p>
+    </div>
+
+    <div id="about" class="about">
+        <h2>About Me</h2>
+        <p>I have a passion for web design and front-end development. i specialize in creating beautiful and user-friendly websites.</p>
+    </div>
+
+    <div id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#">
+            <input type="text" name="Prajakta Jadhav" placeholder="Prajakta Jadhav" required>
+            <input type="email" name="praju@gmail.com" placeholder="praju@gmail.com" required>
+            <textarea name="a passionate web developer specializing in expertisw,eg-creating websites,etc." rows="5" placeholder="a passionate web developer specialializing egg-creating websites." required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
